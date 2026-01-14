@@ -351,7 +351,92 @@ footer {
         0 0 35px rgba(255, 77, 141, 0.4);
 }
 
+/* ========================= */
+/* 📱 RESPONSIVIDADE MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    /* HERO */
+    .hero img {
+        width: 140px;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* HABILIDADES */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* PROJETOS */
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 25px;
+        text-align: center;
+    }
+
+    /* EXPERIÊNCIA */
+    .experience-content {
+        padding: 0 10px;
+    }
+
+    /* CONTATO */
+    .contact-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
 .social-links a[href*="github"] {
     box-shadow: 
         0 0 12px rgba(255, 77, 141, 0.35);
 }
+
