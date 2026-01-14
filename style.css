@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #050505;
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #050505;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+}
+.logo h2 {
+    color: #ff4d8d;
+    font-size: 1.6rem;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu ul li a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #ff4d8d;
+    transition: width 0.3s;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ff4d8d;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #ff4d8d;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #bdbdbd;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4d8d, #ff7aa8);
+    color: #050505;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 45px rgba(255,77,141,0.6);
+}
+
+/* ================= SOBRE ================= */
+.about {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 850px;
+    margin: 0 auto 15px;
+    color: #bdbdbd;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+    padding: 90px 20px;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+.skill-card {
+    background: #111;
+    padding: 30px 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(255,77,141,0.35);
+}
+
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: #ff4d8d;
+    margin-bottom: 10px;
+}
+
+/* ================= PROJETOS ================= */
+.projects {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #050505, #0d0d0d);
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.project-card {
+    background: #111;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 35px 90px rgba(255,77,141,0.45);
+}
+
+.project-card h3 {
+    color: #ff4d8d;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #bdbdbd;
+    margin-bottom: 25px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4d8d, #ff7aa8);
+    color: #050505;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.project-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 50px rgba(255,77,141,0.6);
+}
+
+/* ================= CONTATO ================= */
+.contact {
+    padding: 100px 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info h3,
+.social-media h3 {
+    color: #ff4d8d;
+    margin-bottom: 15px;
+}
+
+.contact-item a {
+    color: #bdbdbd;
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links img {
+    width: 45px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.15);
+}
+
+/* ================= FORM ================= */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.contact-form button {
+    background: #ff4d8d;
+    color: #050505;
+    border: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #ff7aa8;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #020202;
+    color: #888;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* ===== GLOW ROSA NAS REDES SOCIAIS ===== */
+
+.social-links a {
+    background: #111;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 0 0 rgba(255, 77, 141, 0);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a img {
+    filter: brightness(1.15) contrast(1.1);
+}
+
+.social-links a:hover {
+    transform: translateY(-6px) scale(1.08);
+    box-shadow: 
+        0 0 15px rgba(255, 77, 141, 0.6),
+        0 0 35px rgba(255, 77, 141, 0.4);
+}
+
+.social-links a[href*="github"] {
+    box-shadow: 
+        0 0 12px rgba(255, 77, 141, 0.35);
+}
