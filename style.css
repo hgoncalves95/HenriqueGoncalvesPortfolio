@@ -418,8 +418,7 @@ footer {
     .experience-content {
         padding: 0 10px;
     }
-
-    /* CONTATO */
+    
     .contact-content {
         flex-direction: column;
         gap: 40px;
@@ -438,5 +437,16 @@ footer {
 .social-links a[href*="github"] {
     box-shadow: 
         0 0 12px rgba(255, 77, 141, 0.35);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
