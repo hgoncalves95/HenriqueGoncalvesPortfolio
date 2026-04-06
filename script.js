@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ANIMAÇÃO AO SCROLL
     const elements = document.querySelectorAll('.skill-card, .project-card, .about p');
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -16,30 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // SCROLL SUAVE
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
-    // EFEITO NOS PROJETOS
     const projects = document.querySelectorAll('.project-card');
-
     projects.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            card.style.transform = "scale(1.05)";
+            card.style.transform = 'scale(1.05)';
         });
-
         card.addEventListener('mouseleave', () => {
-            card.style.transform = "scale(1)";
+            card.style.transform = 'scale(1)';
         });
     });
 
